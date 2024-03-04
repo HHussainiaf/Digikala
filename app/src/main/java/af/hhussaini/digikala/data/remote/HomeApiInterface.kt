@@ -1,5 +1,5 @@
 package af.hhussaini.digikala.data.remote
 
-interface ApiInterface {
+interface HomeApiInterface {
     //TODO api calls
 }

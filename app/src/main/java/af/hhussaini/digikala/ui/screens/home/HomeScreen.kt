@@ -1,4 +1,4 @@
-package af.hhussaini.digikala.ui.screens
+package af.hhussaini.digikala.ui.screens.home
 
 import af.hhussaini.digikala.ui.theme.selectedBottomBar
 import androidx.compose.foundation.background

@@ -1,6 +1,5 @@
 package af.hhussaini.digikala.di
 
-import af.hhussaini.digikala.data.remote.ApiInterface
 import af.hhussaini.digikala.util.Constance.BASE_URL
 import af.hhussaini.digikala.util.Constance.TIMEOUT_IN_SECOND
 import dagger.Module
@@ -11,7 +10,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -41,9 +39,4 @@ object NetworkModule {
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
-
-    @Provides
-    @Singleton
-    fun provideApiService(retrofit: Retrofit): ApiInterface =
-        retrofit.create(ApiInterface::class.java)
 }

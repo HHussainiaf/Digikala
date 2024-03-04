@@ -6,7 +6,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.Response
 import java.lang.Exception
 
-class BaseApiResponse {
+abstract class BaseApiResponse {
 
     suspend fun <T> safeApiCal(apiCall: suspend () -> Response<ResponseResult<T>>): NetworkResult<T> =
         withContext(Dispatchers.IO) {
